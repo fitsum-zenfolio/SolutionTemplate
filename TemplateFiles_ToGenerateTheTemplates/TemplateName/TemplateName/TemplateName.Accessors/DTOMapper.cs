@@ -5,6 +5,7 @@ using System.Text;
 using AutoMapper;
 
 [assembly: InternalsVisibleTo("$ext_projectname$.Tests.AccessorTests")]
+[assembly: InternalsVisibleTo("$ext_projectname$.Tests.IntegrationTests")]
 
 namespace TemplateName.Accessors
 {

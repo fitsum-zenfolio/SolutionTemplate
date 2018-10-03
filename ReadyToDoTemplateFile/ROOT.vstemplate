@@ -68,6 +68,9 @@
         <ProjectTemplateLink CopyParameters="true" ProjectName="$projectname$.Tests.ManagerTests">
           TemplateName.Tests.ManagerTests\MyTemplate.vstemplate
         </ProjectTemplateLink>
+		<ProjectTemplateLink CopyParameters="true" ProjectName="$projectname$.Tests.IntegrationTests">
+          TemplateName.Tests.IntegrationTests\MyTemplate.vstemplate
+        </ProjectTemplateLink>
 
       </SolutionFolder>
     </ProjectCollection>

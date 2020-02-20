@@ -1,8 +1,0 @@
-{
-  "$schema": "http://json.schemastore.org/template",
-  "author": "Chris Niemann",
-  "classifications": [ "Common", "Solution" ],
-  "identity": "DPL.Template.Solution",
-  "name": "DPL Template Solution",
-  "shortName": "dpltemplatesolution"
-}

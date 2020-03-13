@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataTransferObjects\**" />
+    <EmbeddedResource Remove="DataTransferObjects\**" />
+    <None Remove="DataTransferObjects\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DPL.Template.Accessors.Shared\DPL.Template.Accessors.Shared.csproj" />
+    <ProjectReference Include="..\DPL.Template.Utilities\DPL.Template.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

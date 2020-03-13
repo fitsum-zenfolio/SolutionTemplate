@@ -9,7 +9,7 @@
     <Description>Templates to use when creating an application for DPL Clients.</Description>
     <PackageTags>dotnet-new;templates;dpl</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
-
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>

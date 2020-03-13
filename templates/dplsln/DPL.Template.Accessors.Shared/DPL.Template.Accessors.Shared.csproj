@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DataTransferObjects\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DPL.Template.Common.Shared\DPL.Template.Common.Shared.csproj" />
+    <ProjectReference Include="..\DPL.Template.Utilities\DPL.Template.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

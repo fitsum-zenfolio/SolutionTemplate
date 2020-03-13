@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dbup" Version="4.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="Scripts\001\001.InitialScript.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\001\001.InitialScript.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DPL.Template.Accessors.Shared\DPL.Template.Accessors.Shared.csproj" />
+    <ProjectReference Include="..\DPL.Template.Common.Shared\DPL.Template.Common.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

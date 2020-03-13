@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Tony Wilsman",
+  "classifications": ["Solution"],
+  "identity": "DPL.SolutionTemplate",
+  "name": "Don't Panic Labs Solution",
+  "shortName": "dplsln",
+  "sourceName": "DPL.Template",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  }
+}

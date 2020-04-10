@@ -1,20 +1,27 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Introduction
+
+The purpose of this project is twofold:
+
+1.  Provide a consistent starting point for greenfield DPL projects.
+2.  Reduce the time spent on "plumbing" when spinning up a new project.
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+1. Clone this repo.
+2. Make sure you have the .NET Core 3.1 SDK installed.
+3. Run either of the `installtemplates` scripts to install the template on your machine:
+   - Powershell (Windows/MacOS/Linux): `./installtemplates.ps1`
+   - Bash (WSL/MacOS/Linux): `./installtemplates.sh`
+4. After the template installation has finished, you can run `dotnet new dplsln --name [Company].[Product]` to create a properly-namespaced, iDesign-architected, .NET Core Solution.
+
+# Entity Framework DbContext
+
+`[Solution Directory]/[Customer].[Product].Accessors.Shared/EntityFramework/partials/DatabaseContext.cs` is a partial class. This is to enable a developer to use EntityFramework Core scaffolding from a SQL Server database to generate Entity Framework models.
+
+See this article for more information: https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+You can contribute to this repository by cloning, and making updates to `[LocalRepoFolderName]/templates/dplsln/`.
+
+Push your branch and make a PR!

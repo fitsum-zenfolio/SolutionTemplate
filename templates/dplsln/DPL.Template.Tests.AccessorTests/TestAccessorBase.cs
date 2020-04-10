@@ -1,43 +1,35 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DPL.Template.Accessors.Shared.EntityFramework;
 using DPL.Template.Common.Contracts;
+using System.Transactions;
 
 namespace DPL.Template.Tests.AccessorTests
 {
     [TestClass]
     public abstract class TestAccessorBase
     {
+        private TransactionScope _transactionScopeFixture;
+
         public TestAccessorBase()
         {
         }
 
-        [TestInitialize()]
-        public void Init()
+        [TestInitialize]
+        public void BaseTestInitialize()
         {
-            CreateGlobalContext();
-        }
-
-        [TestCleanup()]
-        public void Cleanup()
-        {
-            CancelGlobalTransaction();
-        }
-
-        public static void CreateGlobalContext()
-        {
-            DatabaseContext.UnitTestContext = DatabaseContext.Create(false);
-            DatabaseContext.UnitTestContext.Database.BeginTransaction();
-        }
-
-        public static void CancelGlobalTransaction()
-        {
-            if (DatabaseContext.UnitTestContext != null)
+            var transactionOptions = new TransactionOptions
             {
-                DatabaseContext.UnitTestContext.Database.RollbackTransaction();
-                DatabaseContext.UnitTestContext.AllowDispose = true;
-                DatabaseContext.UnitTestContext.Dispose();
-                DatabaseContext.UnitTestContext = null;
-            }
+                IsolationLevel = IsolationLevel.ReadCommitted,
+                Timeout = TransactionManager.MaximumTimeout
+            };
+            _transactionScopeFixture = new TransactionScope(
+                TransactionScopeOption.Required,
+                transactionOptions);
+        }
+        [TestCleanup]
+        public void BaseTestCleanup()
+        {
+            _transactionScopeFixture.Dispose();
         }
 
         protected AmbientContext Context { get; } = new AmbientContext();

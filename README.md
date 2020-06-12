@@ -12,7 +12,7 @@ The purpose of this project is twofold:
 3. Run either of the `installtemplates` scripts to install the template on your machine:
    - Powershell (Windows/MacOS/Linux): `./installtemplates.ps1`
    - Bash (WSL/MacOS/Linux): `./installtemplates.sh`
-4. After the template installation has finished, you can run `dotnet new dplsln --name [Company].[Product]` to create a properly-namespaced, IDesign-architected, .NET Core Solution.
+4. After the template installation has finished, you can run `dotnet new dplsln --name [Company].[Product]` to create a properly-namespaced, IDesign method style architecture, .NET Core Solution.
 
 # Entity Framework DbContext
 

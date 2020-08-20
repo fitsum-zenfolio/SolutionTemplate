@@ -29,20 +29,9 @@ namespace DPL.Template.Managers
                 throw new InvalidOperationException("Context cannot be null");
             }
 
-            if (utilityFactory == null)
-            {
-                utilityFactory = new UtilityFactory(Context);
-            }
-
-            if (accessorFactory == null)
-            {
-                accessorFactory = new AccessorFactory(Context, utilityFactory);
-            }
-
-            if (engineFactory == null)
-            {
-                engineFactory = new EngineFactory(Context, accessorFactory, utilityFactory);
-            }
+            utilityFactory ??= new UtilityFactory(Context);
+            accessorFactory ??= new AccessorFactory(Context, utilityFactory);
+            engineFactory ??= new EngineFactory(Context, accessorFactory, utilityFactory);
 
             T result = GetInstanceForType<T>();
 

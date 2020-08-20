@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DPL.Template.Accessors\DPL.Template.Accessors.csproj" />
     <ProjectReference Include="..\DPL.Template.Common.Shared\DPL.Template.Common.Shared.csproj" />
+    <ProjectReference Include="..\DPL.Template.Contracts.Client\DPL.Template.Contracts.Client.csproj" />
     <ProjectReference Include="..\DPL.Template.Engines\DPL.Template.Engines.csproj" />
     <ProjectReference Include="..\DPL.Template.Utilities\DPL.Template.Utilities.csproj" />
   </ItemGroup>

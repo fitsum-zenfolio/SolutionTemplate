@@ -17,7 +17,7 @@ namespace DPL.Template.Tests.ManagerTests
         }
 
         [TestMethod]
-        public void TestManagerMethod_Success()
+        public void TestMe_Success()
         {
             // ARRANGE 
             _testEngineMock.Setup(x => x.TestMe(It.IsAny<string>())).Returns("hello");

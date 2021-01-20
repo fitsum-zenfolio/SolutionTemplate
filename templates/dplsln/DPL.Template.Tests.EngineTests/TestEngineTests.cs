@@ -17,7 +17,7 @@ namespace DPL.Template.Tests.EngineTests
         }
 
         [TestMethod]
-        public void TestEngineMethod_Success()
+        public void TestMe_Success()
         {
             // ARRANGE 
             _testAccessorMock.Setup(x => x.TestMe(It.IsAny<string>())).Returns("hello");

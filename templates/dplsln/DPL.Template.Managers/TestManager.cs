@@ -14,12 +14,7 @@ namespace DPL.Template.Managers
 
         public string TestMe(string input)
         {
-            throw new NotImplementedException();
-        }
-
-        public bool TestManagerMethod()
-        {
-            return _testEngine.TestEngineMethod();
+            return _testEngine.TestMe(input);
         }
     }
 }

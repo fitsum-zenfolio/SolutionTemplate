@@ -8,7 +8,7 @@ namespace DPL.Template.Tests.EngineTests
     [TestClass]
     public class TestEngineTests : EngineTestBase
     {
-        private readonly Mock<ITestAccessor> testAccessorMock = new Mock<ITestAccessor>(MockBehavior.Strict);
+        private readonly Mock<ITestAccessor> _testAccessorMock = new Mock<ITestAccessor>(MockBehavior.Strict);
 
         [TestInitialize]
         public override void TestInitialize()
@@ -20,14 +20,14 @@ namespace DPL.Template.Tests.EngineTests
         public void TestEngineMethod_Success()
         {
             // ARRANGE 
-            testAccessorMock.Setup(x => x.TestAccessorMethod()).Returns(true);
-            var engine = new TestEngine(testAccessorMock.Object);
+            _testAccessorMock.Setup(x => x.TestMe(It.IsAny<string>())).Returns("hello");
+            var engine = new TestEngine(_testAccessorMock.Object);
 
             // ACT
-            var response = engine.TestEngineMethod();
+            var response = engine.TestMe("test test");
 
             // ASSERT
-            Assert.IsTrue(response);
+            Assert.AreEqual(response, "hello");
         }
     }
 }

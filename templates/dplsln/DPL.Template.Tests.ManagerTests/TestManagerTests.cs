@@ -8,7 +8,7 @@ namespace DPL.Template.Tests.ManagerTests
     [TestClass]
     public class TestManagerTests : ManagerTestBase
     {
-        private readonly Mock<ITestEngine> testEngineMock = new Mock<ITestEngine>(MockBehavior.Strict);
+        private readonly Mock<ITestEngine> _testEngineMock = new Mock<ITestEngine>(MockBehavior.Strict);
 
         [TestInitialize]
         public override void TestInitialize()
@@ -20,14 +20,14 @@ namespace DPL.Template.Tests.ManagerTests
         public void TestManagerMethod_Success()
         {
             // ARRANGE 
-            testEngineMock.Setup(x => x.TestEngineMethod()).Returns(true);
-            var manager = new TestManager(testEngineMock.Object);
+            _testEngineMock.Setup(x => x.TestMe(It.IsAny<string>())).Returns("hello");
+            var manager = new TestManager(_testEngineMock.Object);
 
             // ACT 
-            var response = manager.TestManagerMethod();
+            var response = manager.TestMe("test test");
 
             // ASSERT 
-            Assert.IsTrue(response);
+            Assert.AreEqual(response, "hello");
         }
     }
 }

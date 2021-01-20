@@ -13,12 +13,7 @@ namespace DPL.Template.Engines
 
         public string TestMe(string input)
         {
-            throw new NotImplementedException();
-        }
-
-        public bool TestEngineMethod()
-        {
-            return _testAccessor.TestAccessorMethod();
+            return _testAccessor.TestMe(input);
         }
     }
 }

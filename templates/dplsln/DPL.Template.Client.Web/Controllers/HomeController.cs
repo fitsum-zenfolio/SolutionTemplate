@@ -17,7 +17,7 @@ namespace DPL.Template.Client.Web.Controllers
         public IActionResult Index()
         {
             // Test call
-            var response = _testManager.TestManagerMethod();
+            var response = _testManager.TestMe("hi");
 
             return View();
         }

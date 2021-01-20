@@ -4,12 +4,7 @@
     {
         public string TestMe(string input)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public bool TestAccessorMethod()
-        {
-            return true;
+            return input + " hello";
         }
     }
 }

@@ -3,6 +3,5 @@ namespace DPL.Template.Engines
 {
     public interface ITestEngine : IServiceContractBase
     {
-        public bool TestEngineMethod();
     }
 }

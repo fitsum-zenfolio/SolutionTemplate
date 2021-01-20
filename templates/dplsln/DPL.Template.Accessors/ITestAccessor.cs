@@ -4,6 +4,5 @@ namespace DPL.Template.Accessors
 {
     public interface ITestAccessor : IServiceContractBase
     {
-        public bool TestAccessorMethod();
     }
 }

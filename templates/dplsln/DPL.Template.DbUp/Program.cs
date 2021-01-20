@@ -2,8 +2,7 @@
 using System;
 using System.Data.SqlClient;
 using System.Reflection;
-using DPL.Template.Accessors.Shared;
-using DPL.Template.Common.Shared;
+using DPL.Template.Common;
 
 namespace DPL.Template.DbUp
 {

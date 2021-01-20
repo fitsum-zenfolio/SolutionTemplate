@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DPL.Template.Managers\DPL.Template.Managers.csproj" />
+  </ItemGroup>
+
 </Project>

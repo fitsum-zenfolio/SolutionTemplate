@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DPL.Template.Accessors.Shared;
+using DPL.Template.Accessors;
 
 namespace DPL.Template.Tests.AccessorTests
 {

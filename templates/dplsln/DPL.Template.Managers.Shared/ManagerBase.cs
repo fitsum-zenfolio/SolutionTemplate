@@ -11,16 +11,6 @@ namespace DPL.Template.Managers.Shared
 {
     public abstract class ManagerBase : ServiceContractBase
     {
-        public EngineFactory EngineFactory { get; set; }
-        public AccessorFactory AccessorFactory { get; set; }
-        public UtilityFactory UtilityFactory { get; set; }
-
-        // protected I*Accessor *Accessor => AccessorFactory.CreateAccessor<I*Accessor>();
-
-        // protected I*Engine *Engine=> EngineFactory.CreateEngine<I*Engine>();
-
-        // protected I*Utility *Utility=> UtilityFactory.CreateUtility<I*Utility>();
-
         protected ManagerBase()
         {
 

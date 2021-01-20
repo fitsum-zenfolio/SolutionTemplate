@@ -1,13 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using DPL.Template.Client.Web.Models;
+using DPL.Template.Managers;
 
 namespace DPL.Template.Client.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ITestManager _testManager;
+
+        public HomeController(ITestManager testManager)
+        {
+            _testManager = testManager;
+        }
+
         public IActionResult Index()
         {
+            // Test call
+            var response = _testManager.TestManagerMethod();
+
             return View();
         }
 

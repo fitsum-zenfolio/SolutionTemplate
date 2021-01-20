@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DPL.Template.Managers.Shared;
+using DPL.Template.Managers;
 
 namespace DPL.Template.Tests.ManagerTests
 {

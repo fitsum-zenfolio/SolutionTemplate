@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DPL.Template.Accessors.Shared\DPL.Template.Accessors.Shared.csproj" />
+    <ProjectReference Include="..\DPL.Template.Accessors\DPL.Template.Accessors.csproj" />
     <ProjectReference Include="..\DPL.Template.Common.Contracts\DPL.Template.Common.Contracts.csproj" />
   </ItemGroup>
 

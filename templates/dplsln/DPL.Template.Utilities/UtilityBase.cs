@@ -1,4 +1,4 @@
-﻿using DPL.Template.Common.Shared;
+﻿using DPL.Template.Common;
 
 namespace DPL.Template.Utilities
 {
